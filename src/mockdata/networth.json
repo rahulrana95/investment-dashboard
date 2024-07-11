@@ -1,0 +1,240 @@
+[
+  {
+    "id": 1,
+    "date": "2023-03-01",
+    "totalvalue": "1.20 crores",
+    "totalreturns": "33.00 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 2,
+    "date": "2023-03-02",
+    "totalvalue": "1.21 crores",
+    "totalreturns": "33.28 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 3,
+    "date": "2023-03-03",
+    "totalvalue": "1.21 crores",
+    "totalreturns": "33.28 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 4,
+    "date": "2023-03-04",
+    "totalvalue": "1.21 crores",
+    "totalreturns": "33.28 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 5,
+    "date": "2023-03-05",
+    "totalvalue": "1.22 crores",
+    "totalreturns": "33.55 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 6,
+    "date": "2023-03-06",
+    "totalvalue": "1.22 crores",
+    "totalreturns": "33.55 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 7,
+    "date": "2023-03-07",
+    "totalvalue": "1.22 crores",
+    "totalreturns": "33.55 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 8,
+    "date": "2023-03-08",
+    "totalvalue": "1.23 crores",
+    "totalreturns": "33.82 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 9,
+    "date": "2023-03-09",
+    "totalvalue": "1.23 crores",
+    "totalreturns": "33.82 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 10,
+    "date": "2023-03-10",
+    "totalvalue": "1.23 crores",
+    "totalreturns": "33.82 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 11,
+    "date": "2023-03-11",
+    "totalvalue": "1.24 crores",
+    "totalreturns": "34.09 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 12,
+    "date": "2023-03-12",
+    "totalvalue": "1.24 crores",
+    "totalreturns": "34.09 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 13,
+    "date": "2023-03-13",
+    "totalvalue": "1.24 crores",
+    "totalreturns": "34.09 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 14,
+    "date": "2023-03-14",
+    "totalvalue": "1.25 crores",
+    "totalreturns": "34.36 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 15,
+    "date": "2023-03-15",
+    "totalvalue": "1.25 crores",
+    "totalreturns": "34.36 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 16,
+    "date": "2023-03-16",
+    "totalvalue": "1.25 crores",
+    "totalreturns": "34.36 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 17,
+    "date": "2023-03-17",
+    "totalvalue": "1.26 crores",
+    "totalreturns": "34.63 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 18,
+    "date": "2023-03-18",
+    "totalvalue": "1.26 crores",
+    "totalreturns": "34.63 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 19,
+    "date": "2023-03-19",
+    "totalvalue": "1.26 crores",
+    "totalreturns": "34.63 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 20,
+    "date": "2023-03-20",
+    "totalvalue": "1.27 crores",
+    "totalreturns": "34.90 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 21,
+    "date": "2023-03-21",
+    "totalvalue": "1.27 crores",
+    "totalreturns": "34.90 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 22,
+    "date": "2023-03-22",
+    "totalvalue": "1.27 crores",
+    "totalreturns": "34.90 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 23,
+    "date": "2023-03-23",
+    "totalvalue": "1.28 crores",
+    "totalreturns": "35.17 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 24,
+    "date": "2023-03-24",
+    "totalvalue": "1.28 crores",
+    "totalreturns": "35.17 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 25,
+    "date": "2023-03-25",
+    "totalvalue": "1.28 crores",
+    "totalreturns": "35.17 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 26,
+    "date": "2023-03-26",
+    "totalvalue": "1.29 crores",
+    "totalreturns": "35.44 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 27,
+    "date": "2023-03-27",
+    "totalvalue": "1.29 crores",
+    "totalreturns": "35.44 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 28,
+    "date": "2023-03-28",
+    "totalvalue": "1.29 crores",
+    "totalreturns": "35.44 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 29,
+    "date": "2023-03-29",
+    "totalvalue": "1.30 crores",
+    "totalreturns": "35.71 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 30,
+    "date": "2023-03-30",
+    "totalvalue": "1.30 crores",
+    "totalreturns": "35.71 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 31,
+    "date": "2023-03-31",
+    "totalvalue": "1.30 crores",
+    "totalreturns": "35.71 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 32,
+    "date": "2023-04-01",
+    "totalvalue": "1.31 crores",
+    "totalreturns": "35.98 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 33,
+    "date": "2023-04-02",
+    "totalvalue": "1.31 crores",
+    "totalreturns": "35.98 lakhs",
+    "totalreturnpercentage": "27.5 %"
+  },
+  {
+    "id": 34,
+    "date": "2023-04-03",
+    "totalvalue": "1.31 crores",
+    "totalreturns": "35.98 lakhs",
+    "totalreturnpercentage": "27.3"
+  }
+]
