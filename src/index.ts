@@ -4,9 +4,15 @@ import { Sequelize } from 'sequelize';
 import networthMockData from './mockdata/networth.json';
 require('dotenv').config();
 import { Pool } from 'pg';
+import authRouter from './controllers/authController';
+import { authenticateToken } from './middleware/authMiddleware';
 
 const app = express();
 const port = process.env.PORT || 4001;
+
+app.use(express.json());
+
+app.use('/auth', authRouter);
 
 // Create a PostgreSQL pool
 const pool = new Pool({
@@ -16,17 +22,15 @@ const pool = new Pool({
   }
 });
 
-// // Serve static files from the React app in production
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.join(__dirname, '../frontend/build')));
-// }
+export {pool};
+
 
 app.get('/api/v1/', (req, res) => {
   res.json({ message: 'Hello from server!' });
 });
 
 
-app.get('/api/v1/getTotalInvestments', async (req, res) => {
+app.get('/api/v1/getTotalInvestments',authenticateToken, async (req, res) => {
     try {
     // Calculate start date for last 1 month
     const startDate = new Date();
@@ -54,7 +58,7 @@ app.get('/api/v1/getTotalInvestments', async (req, res) => {
   }
 });
 
-app.get('/api/v1/chart-data', async (req, res) => {
+app.get('/api/v1/chart-data',authenticateToken,  async (req, res) => {
   res.json(networthMockData);
 });
 
