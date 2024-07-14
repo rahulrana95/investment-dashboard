@@ -30,7 +30,7 @@ app.get('/api/v1/', (req, res) => {
 });
 
 
-app.get('/api/v1/getTotalInvestments',authenticateToken, async (req, res) => {
+app.get('/api/v1/getTotalInvestments', async (req, res) => {
     try {
     // Calculate start date for last 1 month
     const startDate = new Date();
@@ -38,13 +38,16 @@ app.get('/api/v1/getTotalInvestments',authenticateToken, async (req, res) => {
 
     // Construct SQL query to fetch all columns from smallcaseinvestment table
     const query = {
-      text: 'SELECT * FROM smallcaseinvestment WHERE date >= $1',
+      text: 'SELECT * FROM smallcaseinvestment WHERE date >= $1 ORDER BY date ASC',
       values: [startDate],
     };
 
     // Execute query
+    console.log('connecting db')
     const client = await pool.connect();
+    console.log('client connected')
     const result = await client.query(query);
+    console.log('query fetched')
     const totalInvestments = result.rows;
 
     // Release client
