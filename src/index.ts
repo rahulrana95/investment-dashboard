@@ -6,11 +6,13 @@ require('dotenv').config();
 import { Pool } from 'pg';
 import authRouter from './controllers/authController';
 import { authenticateToken } from './middleware/authMiddleware';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 const port = process.env.PORT || 4001;
 
 app.use(express.json());
+app.use(cookieParser());
 
 app.use('/auth', authRouter);
 
@@ -25,12 +27,13 @@ const pool = new Pool({
 export {pool};
 
 
+
 app.get('/api/v1/', (req, res) => {
   res.json({ message: 'Hello from server!' });
 });
 
 
-app.get('/api/v1/getTotalInvestments', async (req, res) => {
+app.get('/api/v1/getTotalInvestments', authenticateToken,async (req, res) => {
     try {
     // Calculate start date for last 1 month
     const startDate = new Date();
@@ -43,11 +46,8 @@ app.get('/api/v1/getTotalInvestments', async (req, res) => {
     };
 
     // Execute query
-    console.log('connecting db')
     const client = await pool.connect();
-    console.log('client connected')
     const result = await client.query(query);
-    console.log('query fetched')
     const totalInvestments = result.rows;
 
     // Release client

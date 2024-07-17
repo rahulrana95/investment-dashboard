@@ -1,23 +1,24 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
-export interface AuthenticatedRequest extends Request {
-    user?: string | object;
+// Custom request type to include the user property
+interface AuthenticatedRequest extends Request {
+    user?: any;
 }
 
 export const authenticateToken = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader?.split(' ')[1];
+    // Read the token from the cookie
+    const token = req.cookies.token;
 
     if (!token) {
-        return res.sendStatus(401);
+        return res.sendStatus(401); // Unauthorized
     }
 
-    jwt.verify(token, process.env.JWT_SECRET as string, (err, user) => {
+    jwt.verify(token, process.env.JWT_SECRET as string, (err:any, user:any) => {
         if (err) {
-            return res.sendStatus(403);
+            return res.sendStatus(403); // Forbidden
         }
-        req.user = user;
+       req.user = user as { id: string; email: string };
         next();
     });
 };
