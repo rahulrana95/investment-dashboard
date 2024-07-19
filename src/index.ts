@@ -15,7 +15,8 @@ const port = process.env.PORT || 4001;
 // Allow requests from localhost and specific URLs
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://investment-dashboard-egx8.onrender.com'
+  'https://investment-dashboard-egx8.onrender.com',
+  'https://investment-dashboard-ui.onrender.com'
 ];
 
 const corsOptions: cors.CorsOptions = {
