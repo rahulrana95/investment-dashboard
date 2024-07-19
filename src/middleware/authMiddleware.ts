@@ -11,14 +11,16 @@ export const authenticateToken = (req: AuthenticatedRequest, res: Response, next
     const token = req.cookies.token;
 
     if (!token) {
-        return res.sendStatus(401); // Unauthorized
+        return res.status(401).json({ redirectUrl: '/auth/login' });; // Unauthorized
     }
 
-    jwt.verify(token, process.env.JWT_SECRET as string, (err:any, user:any) => {
+    jwt.verify(token, process.env.JWT_SECRET as string, (err: any, user: any) => {
         if (err) {
             return res.sendStatus(403); // Forbidden
         }
-       req.user = user as { id: string; email: string };
+        req.user = user as { id: string; email: string };
         next();
     });
 };
+
+

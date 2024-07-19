@@ -71,7 +71,20 @@ router.post('/login', async (req, res) => {
         const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_SECRET as string, { expiresIn: '48h' });
 
         client.release();
-        res.cookie('token', token, { httpOnly: true, secure: true });
+        // Parse the request origin to get the URL and port
+        const origin = req.headers.origin || req.headers.referer;
+        if (origin) {
+            const url = new URL(origin);
+            const cookieOptions = {
+                httpOnly: true,
+                secure: url.protocol === 'https:',
+                domain: url.hostname,
+                path: '/', // Adjust the path as needed
+            };
+
+            // Set the token as an HTTP-only secure cookie
+            res.cookie('token', token, cookieOptions);
+        }
 
         res.json({ token });
     } catch (error) {
@@ -82,12 +95,12 @@ router.post('/login', async (req, res) => {
 
 router.get('/verify-token', authenticateToken, (req, res) => {
     // @ts-expect-error
-  if (req.user) {
-       // @ts-expect-error
-    res.json({ valid: true, email: req?.user?.email });
-  } else {
-    res.sendStatus(401); // Unauthorized
-  }
+    if (req.user) {
+        // @ts-expect-error
+        res.json({ valid: true, email: req?.user?.email });
+    } else {
+        res.sendStatus(401); // Unauthorized
+    }
 });
 
 export default router;

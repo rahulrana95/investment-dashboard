@@ -7,9 +7,33 @@ import { Pool } from 'pg';
 import authRouter from './controllers/authController';
 import { authenticateToken } from './middleware/authMiddleware';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 
 const app = express();
 const port = process.env.PORT || 4001;
+
+// Allow requests from localhost and specific URLs
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://investment-dashboard-egx8.onrender.com'
+];
+
+const corsOptions: cors.CorsOptions = {
+  // @ts-expect-error
+  origin: (origin: string, callback: (a: any, b?: any) => void) => {
+    console.log(origin);
+    console.log(allowedOrigins.includes(origin))
+
+    if (!origin || allowedOrigins.includes(origin)) {
+      console.log(`origin ${origin} is allowed by cors`);
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true, // Allow credentials (cookies) to be sent
+};
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(cookieParser());
@@ -24,7 +48,7 @@ const pool = new Pool({
   }
 });
 
-export {pool};
+export { pool };
 
 
 
@@ -33,8 +57,8 @@ app.get('/api/v1/', (req, res) => {
 });
 
 
-app.get('/api/v1/getTotalInvestments', authenticateToken,async (req, res) => {
-    try {
+app.get('/api/v1/getTotalInvestments', authenticateToken, async (req, res) => {
+  try {
     // Calculate start date for last 1 month
     const startDate = new Date();
     startDate.setMonth(startDate.getMonth() - 1);
@@ -61,7 +85,7 @@ app.get('/api/v1/getTotalInvestments', authenticateToken,async (req, res) => {
   }
 });
 
-app.get('/api/v1/chart-data',authenticateToken,  async (req, res) => {
+app.get('/api/v1/chart-data', authenticateToken, async (req, res) => {
   res.json(networthMockData);
 });
 
@@ -73,5 +97,5 @@ app.get('/api/v1/chart-data',authenticateToken,  async (req, res) => {
 // }
 
 app.listen(port, () => {
-     console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
