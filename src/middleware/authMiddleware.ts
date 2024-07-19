@@ -9,8 +9,11 @@ interface AuthenticatedRequest extends Request {
 export const authenticateToken = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
     // Read the token from the cookie
     const token = req.cookies.token;
+    console.log('cookies')
+    console.log(token);
 
     if (!token) {
+        console.log('token not found');
         return res.status(401).json({ redirectUrl: '/auth/login' });; // Unauthorized
     }
 
@@ -18,6 +21,7 @@ export const authenticateToken = (req: AuthenticatedRequest, res: Response, next
         if (err) {
             return res.sendStatus(403); // Forbidden
         }
+
         req.user = user as { id: string; email: string };
         next();
     });

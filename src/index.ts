@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
 import { Sequelize } from 'sequelize';
 import networthMockData from './mockdata/networth.json';
@@ -8,8 +8,15 @@ import authRouter from './controllers/authController';
 import { authenticateToken } from './middleware/authMiddleware';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import logger from './logger';
 
 const app = express();
+// Middleware to log requests
+app.use((req: Request, res: Response, next: NextFunction) => {
+  logger.info(`${req.method} ${req.url}`);
+  next();
+});
+
 const port = process.env.PORT || 4001;
 
 // Allow requests from localhost and specific URLs
