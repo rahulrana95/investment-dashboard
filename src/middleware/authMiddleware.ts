@@ -11,9 +11,9 @@ export const authenticateToken = (req: AuthenticatedRequest, res: Response, next
     // Read the token from the cookie
     const token = req.cookies.token || req.headers['token'] || req.headers['Token'];
 
-
+    console.log(req.headers)
     if (!token) {
-        logger.error('token not found')
+        logger.error('Logger: Token not found')
         return res.status(401).json({ redirectUrl: '/auth/login' });; // Unauthorized
     }
 
