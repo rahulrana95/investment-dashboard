@@ -1,0 +1,12 @@
+2024-07-21T06:14:25.931Z [31merror[39m: uncaughtException: listen EADDRINUSE: address already in use :::4001
+Error: listen EADDRINUSE: address already in use :::4001
+    at Server.setupListenHandle [as _listen2] (node:net:1898:16)
+    at listenInCluster (node:net:1946:12)
+    at Server.listen (node:net:2044:7)
+    at Function.listen (/Users/rahulrana/repo/investment-view-dashboard/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/rahulrana/repo/investment-view-dashboard/src/index.ts:168:5)
+    at Module._compile (node:internal/modules/cjs/loader:1434:14)
+    at Module.m._compile (/Users/rahulrana/repo/investment-view-dashboard/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1518:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/rahulrana/repo/investment-view-dashboard/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1249:32)

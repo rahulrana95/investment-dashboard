@@ -8,7 +8,7 @@ interface AuthenticatedRequest extends Request {
 
 export const authenticateToken = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
     // Read the token from the cookie
-    const token = req.cookies.token;
+    const token = req.headers['token'] || req.cookies.token;
     console.log('cookies')
     console.log(token);
 

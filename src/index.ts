@@ -9,8 +9,69 @@ import { authenticateToken } from './middleware/authMiddleware';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import logger from './logger';
+import Redis from 'ioredis';
+import { RateLimiterRedis } from 'rate-limiter-flexible';
+
+const { mode } = process.env;
+
+// Parse the Redis URL
+const redisUrl = process.env.REDIS_URL;
+if (!redisUrl) {
+  throw new Error('REDIS_URL environment variable is not set');
+}
+
+
+
+
+
+
+
+
+let redisClient;
+
+if (mode === 'DEVELOPMENT') {
+  redisClient = redisClient = new Redis(redisUrl);
+} else {
+  redisClient = new Redis({
+    host: process.env.REDIS_SERVICE_NAME, // Render Redis service name, red-xxxxxxxxxxxxxxxxxxxx
+    port: 6379, // Redis port
+  });
+}
+
+
+
+
+redisClient.on('error', (err) => {
+  logger.error('Redis connection error:', err);
+});
+
+redisClient.set("animal", "cat");
+
+redisClient.get("animal").then((result) => {
+  logger.info(result)
+});
+
+const rateLimiter = new RateLimiterRedis({
+  storeClient: redisClient,
+  keyPrefix: 'middleware',
+  points: Number(process.env.RATE_LIMIT_POINTS) || 1000,
+  duration: Number(process.env.RATE_LIMIT_DURATION) || 10,
+});
+
+const rateLimiterMiddleware = (req: Request, res: Response, next: NextFunction) => {
+  rateLimiter.consume(req.ip || "")
+    .then(() => {
+      next();
+    })
+    .catch(() => {
+      res.status(429).send('Too Many Requests');
+    });
+};
 
 const app = express();
+
+app.use(rateLimiterMiddleware);
+
 // Middleware to log requests
 app.use((req: Request, res: Response, next: NextFunction) => {
   logger.info(`${req.method} ${req.url}`);

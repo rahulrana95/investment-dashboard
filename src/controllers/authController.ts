@@ -3,6 +3,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { pool } from '..';
 import { authenticateToken } from '../middleware/authMiddleware';
+import logger from '../logger';
 
 const router = express.Router();
 
@@ -75,6 +76,7 @@ router.post('/login', async (req, res) => {
         const origin = req.headers.origin || req.headers.referer;
         if (origin) {
             const url = new URL(origin);
+            logger.info("HOST url is ", url.hostname)
             const cookieOptions = {
                 httpOnly: true,
                 secure: url.protocol === 'https:',

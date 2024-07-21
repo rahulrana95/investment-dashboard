@@ -1,0 +1,28 @@
+2024-07-21T05:49:39.240Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T05:49:40.142Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T05:49:51.738Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T05:49:54.082Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T05:50:26.383Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T05:50:26.386Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T05:50:34.762Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T05:51:05.891Z [31merror[39m: Redis connection error: connect ETIMEDOUT
+2024-07-21T05:51:26.337Z [31merror[39m: Redis connection error: connect ETIMEDOUT
+2024-07-21T05:51:32.649Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T05:51:36.831Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T05:51:38.927Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T05:52:16.715Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T06:04:07.756Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T06:04:42.800Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T06:04:43.849Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T06:04:44.950Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T06:05:19.568Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T06:05:19.572Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T06:05:25.857Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T06:05:42.384Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T06:05:48.537Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T06:06:01.061Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T06:06:01.065Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T06:06:07.370Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-21T06:06:35.767Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T06:07:20.158Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
+2024-07-21T06:07:47.533Z [31merror[39m: Redis connection error: read ECONNRESET
