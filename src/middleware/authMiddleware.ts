@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
+import logger from '../logger';
 
 // Custom request type to include the user property
 interface AuthenticatedRequest extends Request {
@@ -8,12 +9,11 @@ interface AuthenticatedRequest extends Request {
 
 export const authenticateToken = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
     // Read the token from the cookie
-    const token = req.headers['token'] || req.cookies.token;
-    console.log('cookies')
-    console.log(token);
+    const token = req.cookies.token || req.headers['token'];
+
 
     if (!token) {
-        console.log('token not found');
+        logger.error('token not found')
         return res.status(401).json({ redirectUrl: '/auth/login' });; // Unauthorized
     }
 

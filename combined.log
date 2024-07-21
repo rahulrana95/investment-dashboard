@@ -10478,3 +10478,48 @@
 2024-07-21T06:29:55.769Z [32minfo[39m: HOST url is 
 2024-07-21T06:30:06.863Z [32minfo[39m: GET /api/v1/
 2024-07-21T06:30:06.865Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:43:33.660Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:43:33.674Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:47:01.662Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:47:07.639Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T06:47:07.642Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:47:07.693Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:47:19.767Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T06:47:19.770Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:47:19.817Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:48:02.910Z [32minfo[39m: OPTIONS /auth/login
+2024-07-21T06:48:02.972Z [32minfo[39m: POST /auth/login
+2024-07-21T06:48:04.967Z [32minfo[39m: HOST url is 
+2024-07-21T06:48:29.295Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T06:48:29.302Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:48:29.356Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:49:11.476Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T06:49:11.487Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:49:11.543Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:49:23.923Z [32minfo[39m: OPTIONS /auth/login
+2024-07-21T06:49:23.975Z [32minfo[39m: POST /auth/login
+2024-07-21T06:49:25.724Z [32minfo[39m: HOST url is 
+2024-07-21T06:50:27.266Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T06:50:27.269Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:50:27.340Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:50:36.096Z [32minfo[39m: OPTIONS /auth/login
+2024-07-21T06:50:36.146Z [32minfo[39m: POST /auth/login
+2024-07-21T06:50:37.870Z [32minfo[39m: HOST url is 
+2024-07-21T06:50:42.723Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T06:50:42.752Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:50:42.788Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:50:56.774Z [32minfo[39m: OPTIONS /auth/login
+2024-07-21T06:50:56.827Z [32minfo[39m: POST /auth/login
+2024-07-21T06:50:58.594Z [32minfo[39m: HOST url is 
+2024-07-21T06:53:05.932Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T06:53:05.934Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:53:06.011Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:53:19.065Z [32minfo[39m: OPTIONS /auth/login
+2024-07-21T06:53:19.119Z [32minfo[39m: POST /auth/login
+2024-07-21T06:53:20.930Z [32minfo[39m: HOST url is 
+2024-07-21T06:53:23.931Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T06:53:23.936Z [32minfo[39m: GET /api/v1/
+2024-07-21T06:53:23.991Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T06:54:09.443Z [32minfo[39m: cat
+2024-07-21T06:54:18.222Z [32minfo[39m: cat
+2024-07-21T06:54:27.871Z [32minfo[39m: cat
