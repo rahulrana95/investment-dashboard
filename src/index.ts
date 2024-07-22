@@ -84,24 +84,24 @@ const port = process.env.PORT || 4001;
 const allowedOrigins = [
   'http://localhost:3000',
   'https://investment-dashboard-egx8.onrender.com',
-  'https://investment-dashboard-ui.onrender.com'
+  'https://investment-dashboard-ui.onrender.com',
+  'https://jswarrior.com/'
 ];
 
 const corsOptions: cors.CorsOptions = {
   // @ts-expect-error
   origin: (origin: string, callback: (a: any, b?: any) => void) => {
-    console.log(origin);
-    console.log(allowedOrigins.includes(origin))
-
     if (!origin || allowedOrigins.includes(origin)) {
       console.log(`origin ${origin} is allowed by cors`);
       callback(null, true);
     } else {
+      logger.error(origin);
       callback(new Error('Not allowed by CORS'));
     }
   },
   credentials: true, // Allow credentials (cookies) to be sent
 };
+
 app.use(cors(corsOptions));
 
 app.use(express.json());

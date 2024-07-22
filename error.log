@@ -26,3 +26,6 @@
 2024-07-21T06:06:35.767Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
 2024-07-21T06:07:20.158Z [31merror[39m: Redis connection error: Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details.
 2024-07-21T06:07:47.533Z [31merror[39m: Redis connection error: read ECONNRESET
+2024-07-22T20:27:20.030Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
+2024-07-22T20:27:39.167Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
+2024-07-22T20:27:51.622Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.

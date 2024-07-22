@@ -10528,3 +10528,14 @@
 2024-07-21T07:17:50.235Z [32minfo[39m: cat
 2024-07-21T07:17:52.655Z [32minfo[39m: cat
 2024-07-21T07:18:00.397Z [32minfo[39m: cat
+2024-07-21T07:24:05.613Z [32minfo[39m: cat
+2024-07-21T07:24:46.570Z [32minfo[39m: cat
+2024-07-21T07:24:47.891Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T07:24:47.906Z [32minfo[39m: GET /api/v1/
+2024-07-21T07:24:47.969Z [32minfo[39m: GET /auth/verify-token
+2024-07-21T07:24:59.706Z [32minfo[39m: OPTIONS /auth/verify-token
+2024-07-21T07:24:59.716Z [32minfo[39m: GET /api/v1/
+2024-07-21T07:24:59.763Z [32minfo[39m: GET /auth/verify-token
+2024-07-22T20:27:20.030Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
+2024-07-22T20:27:39.167Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
+2024-07-22T20:27:51.622Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
