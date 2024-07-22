@@ -85,7 +85,7 @@ const allowedOrigins = [
   'http://localhost:3000',
   'https://investment-dashboard-egx8.onrender.com',
   'https://investment-dashboard-ui.onrender.com',
-  'https://jswarrior.com/'
+  'https://jswarrior.com',
 ];
 
 const corsOptions: cors.CorsOptions = {

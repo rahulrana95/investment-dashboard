@@ -10,3 +10,15 @@ ReplyError: Client IP address is not in the allowlist.
 ReplyError: Client IP address is not in the allowlist.
     at parseError (/Users/rahulrana/repo/investment-view-dashboard/node_modules/redis-parser/lib/parser.js:179:12)
     at parseType (/Users/rahulrana/repo/investment-view-dashboard/node_modules/redis-parser/lib/parser.js:302:14)
+2024-07-22T20:35:28.780Z [31merror[39m: unhandledRejection: Client IP address is not in the allowlist.
+ReplyError: Client IP address is not in the allowlist.
+    at parseError (/Users/rahulrana/repo/investment-view-dashboard/node_modules/redis-parser/lib/parser.js:179:12)
+    at parseType (/Users/rahulrana/repo/investment-view-dashboard/node_modules/redis-parser/lib/parser.js:302:14)
+2024-07-22T20:35:34.533Z [31merror[39m: unhandledRejection: Client IP address is not in the allowlist.
+ReplyError: Client IP address is not in the allowlist.
+    at parseError (/Users/rahulrana/repo/investment-view-dashboard/node_modules/redis-parser/lib/parser.js:179:12)
+    at parseType (/Users/rahulrana/repo/investment-view-dashboard/node_modules/redis-parser/lib/parser.js:302:14)
+2024-07-22T20:35:38.285Z [31merror[39m: unhandledRejection: Client IP address is not in the allowlist.
+ReplyError: Client IP address is not in the allowlist.
+    at parseError (/Users/rahulrana/repo/investment-view-dashboard/node_modules/redis-parser/lib/parser.js:179:12)
+    at parseType (/Users/rahulrana/repo/investment-view-dashboard/node_modules/redis-parser/lib/parser.js:302:14)

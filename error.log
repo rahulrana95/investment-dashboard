@@ -29,3 +29,6 @@
 2024-07-22T20:27:20.030Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
 2024-07-22T20:27:39.167Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
 2024-07-22T20:27:51.622Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
+2024-07-22T20:35:28.773Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
+2024-07-22T20:35:34.526Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
+2024-07-22T20:35:38.277Z [31merror[39m: Redis connection error: Client IP address is not in the allowlist.
